@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/artstyles.css">
+
+
+    <title>Art Gen</title>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div></div>
+        <div id="top">
+                <h3>random art generator</h3>
+                <p>This page randomly generates a public domain artwork from the Art Institute of Chicago's online collection. I hope you enjoy!</p>
+                <button type="button" id="myBtn" onclick="location.reload()">ready for something new</button>
+        </div>
+        <div></div>
+
+        <div></div>
+        <div id="myart">
+
+            <div id="artimagediv">
+                    <img src="" id="myimage"></img>
+                    <p id="artimage"> </p>
+                    <span id="randomartnum"> </span> / <span id="totalpages"> </span>
+            </div>
+
+            <div id="artinfodiv">  
+                <p id="arttitle"></p>
+                <p id="artist_display"></p>
+                <p id="date_display"></p>
+                <p id="place_of_origin"></p>
+                <p id="medium_display"></p>
+                <p id="description"></p>
+                <p id="credit_line"></p>
+                <p id="publication_history"></p>
+                <p id="exhibition_history"></p>
+                <p id="provenance_text"></p>
+                <p id="collection_status"></p>
+                <p id="is_public_domain"></p>
+                <p id="copyright_notice"></p>
+            </div>
+            
+        </div>
+        <div></div>
+
+        <div></div>
+        <div id="bottom"></div>
+        <div></div>
+
+    </div>
+
+    <script src="artscript.js"></script>
+</body>
+
+</html>
