@@ -6,7 +6,7 @@ async function getRandomIdNum() {
         "crossDomain": true,
         "url": theURL,
         "method": "GET"
-    }
+    };
         {
         async function generateRandomImage(newURL) {
 
@@ -16,14 +16,14 @@ async function getRandomIdNum() {
                 "crossDomain": true,
                 "url": newURL, // API request URL 
                 "method": "GET"
-            }
+            };
 
             $.ajax(settings).done(function (response) {
-                console.log("Artwork ID: " + response.data[0].id)
-                console.log("Is this artwork public domain?: " + response.data[0].is_public_domain)
+                console.log("Artwork ID: " + response.data[0].id);
+                console.log("Is this artwork public domain?: " + response.data[0].is_public_domain);
                 
 
-                if (response.data[0].is_public_domain === true) {
+                // if (response.data[0].is_public_domain === true) {
                     console.log(response);
 
                     if (response.data[0].image_id === null) {
@@ -138,12 +138,12 @@ async function getRandomIdNum() {
                     $("#arttitle").append("Copyright Notice: " + copyright_notice);
                 }
 
-            }
+            // }
 
-            else {
-                console.log('Image was not public domain. Reloading page.');
-                location.reload();
-            }
+            // else {
+            //     console.log('Image was not public domain. Reloading page.');
+            //     location.reload();
+            // }
 
             })
         }
@@ -155,7 +155,8 @@ async function getRandomIdNum() {
         var totalArt = response.pagination.total_pages
         $("#totalpages").append(totalArt);
 
-        var randomArtNum = Math.floor(Math.random() * totalArt) + 1;
+        // var randomArtNum = Math.floor(Math.random() * totalArt) + 1;
+        var randomArtNum = Math.floor(Math.random() * 5482) + 1;
         $("#randomartnum").append(randomArtNum);
         newURL = "https://api.artic.edu/api/v1/artworks?limit=1&page=" + randomArtNum
         $("#newAPIURL").append(newURL);
